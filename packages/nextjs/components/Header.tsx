@@ -14,8 +14,12 @@ interface HeaderMenuLink {
 
 export const menuLinks: HeaderMenuLink[] = [
   {
-    label: "Home",
+    label: "Embed",
     href: "/",
+  },
+  {
+    label: "Verify",
+    href: "/verify",
   },
   {
     label: "Debug Contracts",
