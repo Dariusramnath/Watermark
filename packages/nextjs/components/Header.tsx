@@ -90,9 +90,14 @@ export const Header = () => {
             </ul>
           )}
         </div>
-        <Link href="/" passHref className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0">
+        <Link
+          href="https://www.factorlabs.io/"
+          target="blank"
+          passHref
+          className="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0"
+        >
           <div className="flex relative w-10 h-10">
-            <Image alt="SE2 logo" className="cursor-pointer" fill src="/logo.png" />
+            <Image alt="SE2 logo" className="cursor-pointer" fill src="/fl_logo.jpg" />
           </div>
           <div className="flex flex-col">
             <span className="font-bold leading-tight">StegoSig</span>

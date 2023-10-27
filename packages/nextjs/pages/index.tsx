@@ -52,10 +52,10 @@ const Home: React.FC = () => {
       <MetaHeader />
       <div className="flex items-center flex-col flex-grow pt-10">
         <div className="mt-10 flex flex-col w-64 h-72 rounded-2xl bg-accent"></div>
-        <div className="items-center flex flex-col text-center mt-10">
+        <div className="items-center flex flex-col text-center w-1/2 lg:w-min mt-10">
           <input
             id="file-input"
-            className="pl-40 pb-6 md:text-xl"
+            className="ml-24 lg:ml-40 pb-6 md:text-xl"
             type="file"
             onChange={handleFileChange}
             accept="image/*"

@@ -14,6 +14,15 @@ const nextConfig = {
     config.resolve.fallback = { fs: false, net: false, tls: false };
     return config;
   },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/landing_page",
+  //       destination: "/https://www.factorlabs.io/",
+  //     },
+  //     // Add more rewrite rules as needed
+  //   ];
+  // },
 };
 
 module.exports = nextConfig;
