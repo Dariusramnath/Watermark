@@ -45,7 +45,6 @@ const ScaffoldEthApp = ({ Component, pageProps }: AppProps) => {
           <main className="relative flex flex-col flex-1">
             <Component {...pageProps} />
           </main>
-          <Footer />
         </div>
         <Toaster />
       </RainbowKitProvider>
