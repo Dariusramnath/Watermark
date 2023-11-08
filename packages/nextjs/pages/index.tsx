@@ -1,10 +1,10 @@
 // import Link from "next/link";
 import { useState } from "react";
 import axios from "axios";
-import type { NextPage } from "next";
 import { toast } from "react-toastify";
 // import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
+import Buttons from "~~/components/Buttons";
 
 type FileData = {
   name: string;
@@ -13,7 +13,7 @@ type FileData = {
 
 const Home: React.FC = () => {
   const [selectedFiles, setSelectedFiles] = useState<FileData[] | null>(null);
-  const [uploading, setUploading] = useState(false);
+  // const [uploading, setUploading] = useState(false);
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const files = event.target.files;
@@ -50,23 +50,24 @@ const Home: React.FC = () => {
   return (
     <>
       <MetaHeader />
-      <div className="flex items-center flex-col flex-grow pt-10">
-        <div className="mt-10 flex flex-col w-64 h-72 rounded-2xl bg-accent"></div>
-        <div className="items-center flex flex-col text-center w-1/2 lg:w-min mt-10">
-          <input
-            id="file-input"
-            className="ml-24 lg:ml-40 pb-6 md:text-xl"
-            type="file"
-            onChange={handleFileChange}
-            accept="image/*"
-            multiple
-          />
-          <button className="bg-primary w-48 h-10 rounded-lg" disabled={uploading}>
-            Upload
-          </button>
-          <button className="bg-primary w-48 h-10 rounded-lg mt-6">Sign</button>
-          <button className="bg-primary w-48 h-10 rounded-lg mt-6">Embed</button>
-          <button className="bg-primary w-48 h-10 rounded-lg mt-6">Download</button>
+      <div className="flex justify-evenly items-center flex-col lg:flex-row-reverse flex-grow pt-0 border-2 border-red-500">
+
+        <div className="flex flex-col items-center lg:mr-48">
+          <div className="lg:mt-6 mt-2 flex flex-col w-64 h-72 rounded-2xl bg-white"></div>
+          <div className="items-center flex flex-col text-center w-1/2 lg:w-min mt-10">
+            <input
+              id="file-input"
+              className="ml-24 lg:ml-40 pb-6 md:text-xl"
+              type="file"
+              onChange={handleFileChange}
+              accept="image/*"
+              multiple
+            />
+          </div>
+        </div>
+
+        <div >
+          <Buttons/>
         </div>
       </div>
     </>
